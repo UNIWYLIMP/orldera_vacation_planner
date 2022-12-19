@@ -1,0 +1,1 @@
+ReactDOM.render(<h1>hiii</h1>, document.getElementById('example'));

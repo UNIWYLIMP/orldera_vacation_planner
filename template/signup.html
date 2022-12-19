@@ -1,0 +1,71 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="ORLDERA PLANNER">
+    <meta name="author" content="JOY EMMANUEL">
+    <meta name="keywords" content="HOLIDAY PLANNER, INVESTMENT, VACATION SUGGESTIONS, VISA AGENCY, SECURITY, TOURISM, FAMILY VACATION">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <title>ORLDERA PLANNER</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+	<style type="text/css">
+        .ader{
+            color: #F46B45;
+            text-align: center;
+            padding-bottom: 30px;
+            font-size: 13px;
+           }
+    </style>
+</head>
+<body>
+	<div class="container px-md-2" style="height: 105vh;">
+	    <div class="row-6 pb-5 mb-5 pt-2 d-flex flex-row">
+	        <div class="col-6">
+	            <img src="{%static './img/logo.png'%}" class="imglogo" style="width:50px; height:50px; object-fit:cover; padding:10px;">
+	        </div>
+	        <div class="col-6 text-end">
+	    		<p class='header' style="padding:10px 10px 10px 0px;"><strong>Orldera</strong></p>
+	        </div>
+	        <div class="audioo">
+   				<audio src="{% static 'aura.mp3' %}" controls autoplay loop class="audio">
+      				Your browser does not support audio!
+    			</audio>
+  			</div>
+			</div>
+			{% for message in messages %}
+				<h2 class="ader">{{message}}</h2>
+			{% endfor %}
+
+
+	    <div class="square">
+
+	    	<div class="box"></div>
+	    	<div class="box"></div>
+	    	<div class="box"></div>
+	    	<div class="box"></div>
+	    	<div class="box"></div>
+	    	<div class="form">
+	    		<div class="form1">
+	    			<h1>SIGNUP</h1>
+	    			<p style="color: #686868;">Fill up to create your account!</p>
+	    			<form class="signup" method="POST">
+						{% csrf_token %}
+			        	<input type="text" name="userName" id="username" placeholder="Full Name:">
+			        	<input type="email" name="email" id="email" placeholder="Email:">
+			        	<input type="password" name="password" id="password" placeholder="Password">
+			        	<input type="password" name="passwordrepeat" id="password2" placeholder="Repeat Password:">
+			        	<br>
+			        	<input type="submit" id="submit" name="submit" placeholder="SUBMIT">
+					<p style="color: #686868; text-align:center;" class=" pt-3">Have an Account? <a href="/login" class="text-primary">Login!</a></p>
+					</form>
+				</div>
+	    	</div>
+		</div>
+	</div>
+	</body>
+</html>

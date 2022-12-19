@@ -1,0 +1,68 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="ORLDERA PLANNER">
+    <meta name="author" content="JOY EMMANUEL">
+    <meta name="keywords" content="HOLIDAY PLANNER, INVESTMENT, VACATION SUGGESTIONS, VISA AGENCY, SECURITY, TOURISM, FAMILY VACATION">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <title>ORLDERA PLANNER</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+      <div class="row px-md-3 mx-md-5 mx-4 py-0 d-flex flex-row" style="height:35px; overflow-y: hidden; background-color:white;">
+          <div class="col-6">
+            <img src="{%static './img/logo.png'%}" class="imglogo" style="width:35px; height:35px; object-fit:cover;">
+          </div>
+          <div class="col-6 text-end">
+            <p class='header' style="padding:10px 0px 10px 0px;"><strong>ELIONA</strong></p>
+          </div>
+       </div>
+
+       <div class="row px-4 py-0 d-flex flex-row border border-1 border-primary bg-primary badda" style="height:40px; overflow-y: hidden;">
+          <div class="col-9 col-xl-8 px-2 px-sm-5 px-md-5 mx-xl-4 border border-1 border-primary d-flex flex-row align-center justify-center mnm">
+            <div class="px-2 px-md-3 px-xl-4 nav" ><a href="/home">Home</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/search">Search</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/50">50!</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/law">Law</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/about">About</a></div>
+          </div>
+         <div class="col-3 pt-1 text-center" >
+           {% if user.is_authenticated %}
+            <a href="/logout" class="btn btn-light text-primary py-0 px-2"> Logout</a>
+           {%else%}
+           <a href="/login" class="btn btn-light text-primary py-0 px-2"> Login</a>
+           {% endif %}
+         </div>
+       </div>
+    </div>
+
+     <div class="row d-flex align-center justify-center text-center py-5">
+         <form method="POST" action="suggest">{% csrf_token %}<button style="background: transparent; border: 0px;"><img src="{%static './img/bab.png' %}" style="height: 35px; width: 35px; margin-right: 20px;"></button></form></div>
+    {%if num > 0%}
+			<a href="{% url 'cities' city.cityName%}" style="text-decoration:none;">
+			<div class="row px-1 py-1" >
+				<div class="row d-flex flex-column flex-md-row w-75 m-auto px-4 py-4 xnv">
+					<div class="col-12 col-md-6 m-auto">
+						<img src="{%static city.cityImage3 %}" class="xnv" style="height:300px; width: 95%; object-fit: cover;">
+					</div>
+					<div class="col-12 col-md-6 d-flex flex-column text-center text-start justify-content-center py-2 px-3">
+						<h3 class="py-2 text-h5 text-dark text-md-start text-primary">{{city.cityName}}</h3>
+						<p class="text-md-start text-dark py-2 parra">{{city.cityDescription}}</p>
+					</div>
+				</div>
+			</div></a>
+    {% else %}
+		<div class="text-center third">
+		<h4 class="text-dark mt-5 pt-5">Please click the suggestion button above to get a location suggested to you!</h4>
+		</div>
+    {% endif %}
+
+</body>
+</html>

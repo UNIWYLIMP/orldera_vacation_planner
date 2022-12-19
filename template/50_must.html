@@ -1,0 +1,652 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="ORLDERA PLANNER">
+    <meta name="author" content="JOY EMMANUEL">
+    <meta name="keywords" content="HOLIDAY PLANNER, INVESTMENT, VACATION SUGGESTIONS, VISA AGENCY, SECURITY, TOURISM, FAMILY VACATION">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <title>ORLDERA PLANNER</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+	<div class="row px-md-3 mx-md-5 mx-4 py-0 d-flex flex-row" style="height:35px; overflow-y: hidden; background-color:white;">
+      <div class="col-6">
+        <img src="{%static './img/logo.png'%}" class="imglogo" style="width:35px; height:35px; object-fit:cover;">
+	  </div>
+	  <div class="col-6 text-end">
+        <p class='header' style="padding:10px 0px 10px 0px;"><strong>ELIONA</strong></p>
+      </div>
+   </div>
+
+   <div class="row px-4 py-0 d-flex flex-row border border-1 border-primary bg-primary badda" style="height:40px; overflow-y: hidden;">
+      <div class="col-9 col-xl-8 px-2 px-sm-5 px-md-5 mx-xl-4 border border-1 border-primary d-flex flex-row align-center justify-center mnm">
+        <div class="px-2 px-md-3 px-xl-4 nav" ><a href="/home">Home</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/search">Search</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/50">50!</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/law">Law</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/about">About</a></div>
+      </div>
+     <div class="col-3 pt-1 text-center">
+       {% if user.is_authenticated %}
+        <a href="/logout" class="btn btn-light text-primary py-0 px-2"> Logout</a>
+       {%else%}
+       <a href="/login" class="btn btn-light text-primary py-0 px-2"> Login</a>
+       {% endif %}
+     </div>
+   </div>
+
+  </div>
+   <div class="row px-3 py-5" style=" width: 90%; margin: auto;">
+     <h1 class="text-primary text-center">
+         50 THINGS TO <span class="black">HAVE WITH YOU FOR HOLIDAYS.</span>
+     </h1>
+     <p class="py-3 text-center text-md-start parran">
+       Our vacation list gives you the right view about everything you need to travel. That way, you wouldn't have to worry about missing anything essential during your holidays.
+     </p>
+   </div>
+      <div class="row m-auto w-75 p-3 d-flex flex-column">
+        <div class="col-12 text-center text-md-start">
+          <h4 class="py-5 text-start">1. Passport</h4>
+          <img src="{%static '/img50/h53.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+        </div>
+        <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+            <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's the</span> Passport?</h3>
+          <p class="text-md-start py-2 parran"> An RFID-blocking passport holder is a great addition to keep your passport safe and accounted for. Some people also like to make photocopies of their passports, just in case. Always remember to hold your travelling documents at all points on your vacation to prevent harassment.</p>
+        </div>
+      </div>
+
+    <div class="row m-auto w-75 p-3 d-flex flex-column">
+        <div class="col-12 text-center text-md-start">
+          <h4 class="py-5 text-start">2. Documents Required at Destination.</h4>
+          <img src="{%static '/img50/h44.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+        </div>
+        <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+            <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's the</span> Document?</h3>
+            <p class="text-md-start py-2 parran">Some customs agents are not overly keen on digital documents shown on your phone. Try to print your key documents off before traveling, if possible, including:</p>
+            <ul class="text-start p-0">
+                <li>- pre-travel test,</li>
+                <li>- vaccine certificate</li>
+                <li>- recovery certificate,</li>
+                <li>- hotel confirmation or Airbnb receipt for your quarantine, if needed, of course.</li>
+            </ul>
+        </div>
+      </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">3. Travel Insurance</h4>
+              <img src="{%static '/img50/h8.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's the</span> Insurance?</h3>
+                <p class="text-md-start py-2 parran">Don’t take the risk, even for short trips. Be sure to check the fine print of your insurance and the specifics of what you are covered for.NAggregator websites often list by best price, rather than all essentials you selected. For travel medical insurance, consider SafetyWing for your next trip</p>
+            </div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">4. Driver’s License</h4>
+              <img src="{%static '/img50/h42.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's the</span> Passport?</h3>
+                <p class="text-md-start py-2 parran">While not all driver’s licenses are valid abroad, this can double-up as an important document to verify your identity. As always, check your destination to see if your driver’s license is valid for driving.</p></div>
+          </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">5. Rental Car Confirmation</h4>
+              <img src="{%static '/img50/h52.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's the</span> Rental?</h3>
+                <p class="text-md-start py-2 parran">Have this document on hand, ready for when you get to the rental station. If you’re new to renting a car abroad, check the rental car guide for Europe which is packed with plenty of tips and things to be aware of.</p>
+            </div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">6. Trip Itinerary</h4>
+              <img src="{%static '/img50/h38.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">The travel binder gives you over 30 pages of printables to document and plan your trip. That way, you won’t waste time on trip last-minute planning and wasting time.</p></div>
+            </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">7. Travel Documents Organizer</h4>
+              <img src="{%static '/img50/h59.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Why spend time combing through scrumped-up papers in your carry-on? Keep all your documents in one safe place with a travel documents organizer.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">8. Cash & Cards</h4>
+              <img src="{%static '/img50/h41.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Try to exchange cash before you fly, and use your cards for backup. Airports, in particular, will give you a very poor exchange rate once you land.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">9. List of Emergency Contacts</h4>
+              <img src="{%static '/img50/h12.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Need a printable for this? Our travel binder, has you covered.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">10. Copies of Travel Docs</h4>
+              <img src="{%static '/img50/h56.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Particularly for documents such as passports and driver’s licenses that can’t be printed, it’s a great idea to scan them in and print off copies at home. Add them to your travel document organizer, for peace of mind.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">11. Face Mask</h4>
+              <img src="{%static '/img50/h31.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">In the airport, and on flights, you will often have to wear your mask for several hours at a time. The N95 mask is a good choice if you can get one. The important thing is to choose a mask you will be comfortable wearing. Before flying, try wearing one at home for long periods of time.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">12. Hand Sanitizer</h4>
+              <img src="{%static '/img50/h5.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">It is easy to find hand sanitizer under 100ml that you can bring on the plane. This one has a clip too, that can be easily attached to a rucksack strap.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">13. Antibacterial Wipes</h4>
+              <img src="{%static '/img50/h22.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Great to have on hand to wipe down taps, toilet seats, armrests, airplane trays, and any other hard services you’ll encounter, both in the airport and on the plane.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">14. Latex Gloves</h4>
+              <img src="{%static '/img50/h11.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Particularly when using the toilet, several packs of latex gloves are essential to travel with. Once used, you can simply discard them</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">15. Airplane Seat Cover</h4>
+              <img src="{%static '/img50/h13.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">As most airplane seats are padded with fabric, spraying and wiping them down is often not an option. This is where an airplane seat cover can really come in handy.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">16. Laptop & Charger</h4>
+              <img src="{%static '/img50/h29.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">You’ll quickly discover conventional laptops can be very heavy to carry. Ultraportable laptops are ideal if you have to do some work while traveling. Also consider a padded sleeve to protect your laptop when stowed in your carry-on, or if your rucksack doesn’t have a laptop pouch.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">17.  Phone & Charger</h4>
+              <img src="{%static '/img50/h47.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Remember to turn off data roaming when you board the flight. Once you arrive and turn airplane mode off, you can rack up heavy charges in seconds in other countries.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">18. Portable Battery</h4>
+              <img src="{%static '/img50/h30.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Portable batteries are a lifesaver on long flights. This device can give you hours of additional charge if you want to use your phone or device to listen to music or watch movies. Remember to fully charge it the night before.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">19. Multi-Charger</h4>
+              <img src="{%static '/img50/h54.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Rather than having to travel with multiple cables, use a multi-charger cable. Not only will you save space, but you can also charge and use all your devices from one solitary point, using one travel adapter.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">20. Travel Adapter</h4>
+              <img src="{%static '/img50/h56.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Universal adapters are a great choice over single-purpose adapters. Such a device allows you to charge from nearly any country in the world. But wherever you go, you absolutely need one.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+              <h4 class="py-5 text-start">21. Noise-Cancelling Headphones</h4>
+              <img src="{%static '/img50/h23.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Great for remote working, sleeping on flights, and relaxing. If headphones are too bulky for your carry-on, you can also consider noise-canceling earbuds.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">22. GoPro</h4>
+              <img src="{%static '/img50/h50.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">What is great about GoPro is that you can take it literally anywhere. It’s a worthy investment if you want to snap from pools, beaches, hikes, and any outdoor activities. That way you put your phone, or an expensive SRL/DSRL, at less risk. There are some great accessories for it too.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">23. Travel Speaker</h4>
+              <img src="{%static '/img50/h33.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Find a travel speaker that is waterproof, with wifi or BlueTooth connectivity. We own and travel with the Wonderboom speaker from Ultimate Ears.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">24. Travel pillow</h4>
+              <img src="{%static '/img50/h2.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">If you invest in a quality travel pillow, not the cheap ones found at airport, they can really help you relax and sleep on flights, buses, and cars. Head over to our guide to the best travel pillows to find a pillow that’s right for you.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">25.  Lounge Pass</h4>
+              <img src="{%static '/img50/h45.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">The airport lounge can make travel are far more pleasurable experience. If you travel often, a lounge pass can be a sound investment. Our guide on how to get airport lounge access will give you more information.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">26. Sleeping Mask</h4>
+              <img src="{%static '/img50/h14.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">If you are sensitive to light, sleeping on a flight can be really difficult. With a comfortable design, sleeping masks can really help you get some shut eye on long flights.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">27. Earplugs</h4>
+              <img src="{%static '/img50/h27.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">As with sleeping masks, cheap, conventional earplugs rarely work. Take some time to find a design that works for you, and earplugs will drastically reduce noise on flights.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">28. Water Bottle</h4>
+              <img src="{%static '/img50/h3.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">You can fill up a collapsible water bottle using a free water fountain after security checks before you board. That way, you can stay hydrated throughout your flight.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">29. Travel Blanket</h4>
+              <img src="{%static '/img50/h48.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Look for a travel blanket that packs up into a pouch. That way, you can attach it to your carry-on without taking up space. A/C in particular on long flights can make the plane very cold, so it’s always good to have a blanket that covers the length of your body.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">30. Anti-Nausea Bands</h4>
+              <img src="{%static '/img50/h26.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Ideal if motion or the pressure changes on flights make you feel nauseous. Anti-nausea bands are so simple to use, you’ll barely notice them on your wrist.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">31. Fire TV Stick</h4>
+              <img src="{%static '/img50/h37.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Most hotels and AirBnBs today are equipped with TVs that have in the very least HDMI compatibility. A Fire TV Stick allows you to watch Netflix, Prime, Disney+, YouTube, and plenty of other services, all from one place. All this highly portable device needs is an internet connection, HDMI port, and electrical socket connection.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">32. Paperwhite</h4>
+              <img src="{%static '/img50/h17.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Reading is a great way to relax and pass free time. A Kindle Paperwhite is a super lightweight device, and allows you to access all your downloaded titles offline. The device does not emit blue light, so you won’t feel eye strain after a short amount of time.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">33. Travel Journal</h4>
+              <img src="{%static '/img50/h18.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Travel journaling can be very therapeutic in your downtime, encouraging you to write down thoughts, feelings, and ideas. Our travel binder includes travel journal pages you can print out.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">34. Weekender Bag</h4>
+              <img src="{%static '/img50/h4.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">It’s a great idea to pack a smaller weekender bag in your luggage. That way you don’t need to lug a carry-on around for a day trip or weekend away, while on vacation. </p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">35. Carry On</h4>
+              <img src="{%static '/img50/h16.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Your carry-on needs to strike the perfect balance between comfort, space, and style. If you’re worried about your carry-on ending up in checked luggage, our guide to the best underseat carry-on luggage will help you. In addition, wheeled backpacks may also be a good choice for you.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">36. Checked Suitcase</h4>
+              <img src="{%static '/img50/h35.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Always choose function over style with suitcases. Suitcases get battered, so don’t get precious about how your suitcase looks. Choose one that is easy to push and designed to withstand heavy collisions. </p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">37. Packing Cubes</h4>
+              <img src="{%static '/img50/h49.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Some debate packing cubes don’t save space, but purely for the organization alone they are worth it. </p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">38. Clothes</h4>
+              <img src="{%static '/img50/h20.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Here is a list of some essential clothes to have for a vacation: </p>
+            <div class="d-flex">
+                <ul class="p-0 px-3 text-start">
+                    <li>- Tops</li>
+                    <li>- Skirts</li>
+                    <li>- Jeans or Pants</li>
+                    <li>- Dresses</li>
+                    <li>- Jackets</li>
+                    <li>- Pajamas</li>
+                    <li>- Sweaters</li>
+                    <li>- Workout Clothes</li>
+                    <li>- Swimsuit</li>
+                    <li>- Rain Jacket</li>
+                    <li>- Socks</li>
+                    <li>- Underwear</li>
+                    <li>- Shorts</li>
+                    <li>- Leggings</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">39. Accessories</h4>
+              <img src="{%static '/img50/h25.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Likewise with our clothes list, our accessories list can help you pack appropriately for your vacation:</p>
+                <ul class="p-0 px-3 text-start">
+                    <li>- Hats</li>
+                    <li>- Sunglasses</li>
+                    <li>- Belt</li>
+                    <li>- Scarves</li>
+                    <li>- Purses</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">40. Shoes</h4>
+              <img src="{%static '/img50/h58.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">It is a good idea to pack a pair of casual shoes, a pair of going-out shoes, and if you workout, a pair of training shoes. That set of three should cover you for most activities and scenarios.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+                <div class="col-12 text-center text-md-start">
+                      <h4 class="py-5 text-start">41. Toiletries Bag & Toiletries</h4>
+                  <img src="{%static '/img50/h6.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+                </div>
+                <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                    <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                    <p class="text-md-start py-2 parran">Get yourself a large toiletries bag, and be sure to pack your essentials. If you use specific shampoos, deodorants, or other toiletries, it can be so difficult to find certain items abroad. Don’t take the risk, always pack everything you need.</p></div>
+            </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">42. Medication</h4>
+              <img src="{%static '/img50/h21.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Likewise to toiletries, medication should be taken seriously. Pharmacies in other countries may not be open on weekends or it may be difficult to explain your symptoms in another language.</p></div>
+                <ul class="p-0 px-3 text-start">
+                    <li>- Prescriptions</li>
+                    <li>- Pain Reliefs</li>
+                    <li>- First Aid Kits</li>
+                    <li>- Antacid</li>
+                    <li>- Birth Control</li>
+                    <li>- Allergy Medication</li>
+                    <li>- Insect Repellent</li>
+                    <li>- Vitamins</li>
+                </ul>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">43. Beauty</h4>
+              <img src="{%static '/img50/h19.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Particularly for getaways and evenings at bars and restaurants, you will want to look your best and feel great.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">44. Glasses/Contacts</h4>
+              <img src="{%static '/img50/h7.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Always carry a spare pair of glasses. Make sure both pairs are packed into their provided glasses cases. If you wear contacts, bring more than you need for the duration of the vacation.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">45. Jewelry Travel Case & Jewelry</h4>
+              <img src="{%static '/img50/h28.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Many leave expensive jewelry at home out of fear of loss or damage. A jewelry travel case is an excellent way to carry jewelry in a safe way.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">46. Money Belt</h4>
+              <img src="{%static '/img50/h15.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Money belts have come a long way from the stereotypical bulky belt of the nineties. Nowadays, there are plenty of clever designs out there.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">47. Snacks</h4>
+              <img src="{%static '/img50/h39.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Aim for high-protein foods, and try to avoid foods with lots of added sugar. A bag of almonds, cashews, or trail mix are good choices.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">48. Sewing Repair Kit</h4>
+              <img src="{%static '/img50/h55.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">A sewing repair kit is simple to pack and stops you from having to go out and buy new clothes. Rips and tears are common when you’re constantly out and about and moving.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">49. Stain Remover Stick</h4>
+              <img src="{%static '/img50/h36.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">This stain remover from Tide is a great little accessory to remove coffee, wine, and other stains from clothes, hotel sheets, and carpet floors. We’ve used it countless times when traveling. If you act fast, you can not only save your favorite clothes, you can also avoid disagreements and fines at hotels and AirBnBs.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">50. Eyeglass Repair Kit</h4>
+              <img src="{%static '/img50/h34.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">Essential to pack if you don’t use contacts. The screws used to connect the temples to the frames are so tiny, conventional screwdrivers are too big to fix them.</p></div>
+        </div>
+
+        <div class="row m-auto w-75 p-3 d-flex flex-column">
+            <div class="col-12 text-center text-md-start">
+                  <h4 class="py-5 text-start">51. VPN Account</h4>
+              <img src="{%static '/img50/h40.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+            </div>
+            <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-center justify-content-center">
+                <h3 class="py-2 text-h5 text-md-start text-primary"><span class="black">What's it</span> about?</h3>
+                <p class="text-md-start py-2 parran">VPNs like ExpressVPN allow you to anonymously browse the internet via a masked IP address. Hotel and coffee shop wifi, in particular, are incredibly vulnerable to hackers due to poor security. VPNs give you peace of mind that no one can stalk your activities online.</p></div>
+        </div>
+    <div class="row d-flex flex-column flex-md-row text-light bg-primary foot">
+      <div class="col display-flex flex-column justify-center align-center">
+        <h1>Links</h1>
+        <ul>
+          <li><a href="#">- Home</a></li>
+          <li><a href="#">- Search</a></li>
+          <li><a href="#">- 50+</a></li>
+          <li><a href="#">- Laws</a></li>
+          <li><a href="#">- About</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Contact</h1>
+        <ul>
+          <li>- +2347046810016</li>
+          <li>- uniwylimp@gmail.com</li>
+          <li>- 6b Akintola Odeyemi Street, Ikotun, Lagos-Nigeria.</li>
+          <li>- IG: <a href="#">orldera_</a></li>
+          <li>- Fb: <a href="#">Orldera</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Services</h1>
+        <ul>
+          <li>- Donate To Orldera</li>
+          <li>- <a href="mailto:uniwylimp@gmail.com">Mail Us</a></li>
+          <li>- Forum</li>
+          <li>- Groups</li>
+        </ul>
+      </div>
+  </div>
+    <div class="row d-flex flex-column justify-center align-center foot2">
+    <div class="col text-center">
+      <img src="{% static './img/facebook.svg' %}">
+      <img src="{% static './img/twitter.svg' %}">
+      <img src="{% static './img/journal-medical.svg' %}">
+      <img src="{% static './img/medium.svg' %}">
+
+    </div>
+    <div class="col text-center pt-3 text-light"><p>Orldera Co-operation is registered under and supported by <a href="https://www.webelios.com">Webelios.Inc</a> the founding organisation of this company. Mail us for investment, deals, offers, donation and even employment opportunities.</p></div>
+    <div class="col text-center text-light tsy">&copy; 2022 All right Reservedd. Webelios.Inc</div>
+  </div>
+</body>
+</html>

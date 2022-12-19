@@ -1,0 +1,244 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="ORLDERA PLANNER">
+    <meta name="author" content="JOY EMMANUEL">
+    <meta name="keywords" content="HOLIDAY PLANNER, INVESTMENT, VACATION SUGGESTIONS, VISA AGENCY, SECURITY, TOURISM, FAMILY VACATION">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <title>ORLDERA PLANNER</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/global.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+  <div class="audioo">
+    <audio src="{% static 'aura.mp3' %}" controls autoplay loop class="audio">
+      Your browser does not support audio!
+    </audio>
+  </div>
+
+  <div class="row px-md-3 mx-md-5 mx-4 py-0 d-flex flex-row" style="height:40px; overflow-y: hidden; position:fixed; top:0px; left:-25px; width: 101%; background-color:white;">
+      <div class="col-6">
+        <img src="{%static './img/logo.png'%}" class="imglogo" style="width:40px; height:40px; object-fit:cover;">
+	  </div>
+	  <div class="col-6 text-end">
+        <p class='header' style="padding:10px 40px 10px 0px;"><strong>ELIONA</strong></p>
+      </div>
+   </div>
+
+   <div class="row px-4 py-0 d-flex flex-row border border-1 border-primary bg-primary badda" style="height:40px; overflow-y: hidden; position:fixed; top:40px; left:12px; width: 100%;">
+      <div class="col-9 col-xl-8 px-2 px-sm-5 px-md-5 mx-xl-4 border border-1 border-primary d-flex flex-row align-center justify-center mnm">
+        <div class="px-2 px-md-3 px-xl-4 nav" ><a href="/home">Home</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/search">Search</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/50">50!</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/law">Law</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/about">About</a></div>
+      </div>
+     <div class="col-3 pt-1 text-center" >
+       {% if user.is_authenticated %}
+        <a href="/logout" class="btn btn-light text-primary py-0 px-2"> Logout</a>
+       {%else%}
+       <a href="/login" class="btn btn-light text-primary py-0 px-2"> Login</a>
+       {% endif %}
+     </div>
+   </div>
+
+  </div>
+  <div class="row px-3 px-md-5 mb-5 py-5 pt-md-5 bg-light" style="margin-top:60px">
+    <div class="row-6 d-block d-md-none">
+      <div class="row w-50 mx-auto pt-5">
+        <img src="{%static './img/landing.png'%}" class='nnn'>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 my-auto text-center text-md-start">
+      <div class="row mt-2 mt-md-0 pt-2">
+        <h1 class="text-primary title">WHAT IS<span class="black"> ORLDERA?</span></h1>
+      </div>
+      <div class="row pt-3 px-1">
+        <div class="animate_p">
+          <p class="body parra">Who doesn't like a warm vacation full of happiness, or the luxirous sight of the blue pan atlantic? Orldera is your revolutionalizing investment in inter-continental and local travel. Our plan is to provide our customers with a life time vacation planner, giving them travel destinations and linking them with the best travelling agencies possible.
+          </p>
+        </div>
+        <div class="text-md-start mt-3">
+        <a class="btn btn-primary " href="">Policies</a>
+      </div>
+      </div>
+    </div>
+    <div class="col-6 d-none d-md-block">
+      <div class="row ">
+        <img src="{%static './img/landing.png'%}" class='nnn' style="object-fit:cover; width:85%; height:85%;">
+      </div>
+    </div>
+  </div>
+  <div class="xz">
+  <h6 class="text-center policy">SERVICES</h6>
+  <h1 class="text-center" style="font-size:65px; font-weight:600;">WHAT <span class="policy text-primary">IS</span> OUR POLICY?</h1>
+  </div>
+  <div class="row d-block d-md-flex flex-row text-center py-3 px-4 bg-light block_1" style="height:auto;">
+    <div class="col-12 col-md-6">
+      <div class="row mx-auto">
+        <img src="{% static './img/home6.jpg' %}" class="img_2" style="object-fit:cover; width:100%; height: 500px;">
+      </div>
+    </div>
+    <div class="col-12 col-md-6 d-flex flex-column justify-content-md-center py-3">
+      <h3 class="py-2 text-h5 text-md-start text-primary">WHAT'S OUR POLICY?</h3>
+      <p class="text-md-start py-2 parra">
+        All customers irrespective of geopolitical area are entitled to life<a href="#" class="text-primary" style="text-decoration: none;"> protection policy</a>. Providing our customers with 100% assurance for life protection, legal legislation, security and regular survellance checkups procedure. Backed by the legal act of Article 3 of the Universal Declaration of Human Right, provides that "everyone has the right to life, liberty and security of person."</p>
+      <div class="text-md-start mt-3">
+        <a class="btn btn-primary " href="">Policies</a>
+      </div>
+    </div>
+    </div>
+   <div class="con_1">
+      <div class="heading_1 d-flex flex-column flex-md-row">
+        <div class="tes1 w-100 w-md-50">
+          <h6 class="blue">Our Customer's Review</h6>
+          <h2 class="mh2">A LIST OF OUR <br><span class="blue brow">-CUSTOMERS' </span> RECOMMENDS.</h2>
+        </div>
+        <div class="tes2 w-100 w-md-50">
+          <p>We at Orldera provides high quality services, to ensure our customer have a great experience during their vacations. We've been recommended by multiple brands across the world and we can proudly say that we provide you with 120% quality of service. Here are a list of our brand reviews by our trusted customers on a day to day basis.</p>
+        </div>
+      </div>
+      <div class="heading_2 d-flex flex-column flex-md-row">
+        <div class="case">
+          <img class="" src="{%static './img/person1.jpg' %}" alt="" style="margin:10px;">
+          <h4 class="">Florence Falon</h4>
+          <p>I stumbled upon Orldera when I had a vacation Crises. It helped me decide on where to spend my Vacation and provided me with proper information. It is very Nice!</p>
+        </div>
+        <div class="case">
+          <img class="" src="{%static './img/person5.jpg' %}"  alt="" style="margin:10px;">
+          <h4 class="">James Bond</h4>
+          <p>Orldera is Awesome! It's 100% free and you don't have to worry about paying for services. It's quick for getting a proper mop up plan and info concerning where you'll be going, plus they provide security insurance.</p>
+        </div>
+        <div class="case">
+          <img class="" src="{%static './img/person7.jpg' %}"  alt="" style="margin:10px;">
+          <h4 class="">Mike Jones</h4>
+          <p>It's one of the web friendly apps that provided its customer with a quick customer care services. I was on vacation and had issues with my visa, Orldera provided me with a tons of solution.</p>
+        </div>
+      </div>
+    </div>
+    <div class="con_3 d-flex flex-column flex-md-row">
+      <div class="x1 w-80 w-md-50 px-md-3">
+        <img class="sunny" src="{%static './img/home9.jpg' %}"  alt="">
+      </div>
+      <div class="x2 w-100 w-md-50">
+        <h6 class=""><span class="blue">TRENDING</span></h6>
+        <h1 class="">TORONTO ONTARIO</h1>
+        <p>Welcome to Toronto, capital of the Canadian province of Ontario. With a recorded population of 2,794,356 in 2021 it is the most popolous city in the country. Toronto is the most trending city to visit under Orldera Board, having six stars hotel and fancy tour site, the city is the perfect destination to spend your holidays. Don't miss out on this once in a life time opportunity.</p>
+        <div class="lists">
+          <div class="list1">
+            <ul>
+              <li>1. Great Tours</li>
+              <li>3. Great meals</li>
+            </ul>
+          </div>
+          <div class="list2">
+            <ul>
+              <li>2. Top Security</li>
+              <li>4. Classy Hotels</li>
+            </ul>
+          </div>
+        </div>
+        <div class="strip">
+          <p>Don't miss out on this offer. Click the Button to get your Toronto plans.</p>
+        </div>
+        <div class="clasico">
+        <a class="sugar" href="#">Visit</a>
+        </div>
+      </div>
+    </div>
+    <div class="con_2">
+      <h1 class="mn"><span class="blue">50+</span> MUST HAVE FOR A HOLIDAY!</h1>
+      <div class="block_1 d-flex flex-column flex-md-row">
+        <div class="block_1a">
+          <img class="" src="{%static './img/swimsuit1.jpg' %}"  alt="" />
+          <div class="text-center hella">
+          <h4 class="">Swimsuit</h4>
+          <p>Beach Vacation require different items like sunglasses, water shoes, towels, sunscreen and maybe even snorkel gear.</p>
+          <a class="vv" href="#">read more </a>
+          </div>
+        </div>
+        <div class="block_1a">
+          <img class="" src="{%static './img/sunglasses.jpg' %}"  alt="" />
+         <div class="text-center hella">
+          <h4 class="">Sunglasses</h4>
+          <p>You're heading to beach, so obviously, a swimsuit is one of the main beach essentials you need! We like to travel with at least two different swimsuit.</p>
+          <a class="vv" href="#">read more </a>
+          </div>
+        </div>
+        <div class="block_1a">
+          <img class="" src="{%static './img/sweater.jpg' %}"  alt="" />
+          <div class="text-center hella">
+          <h4 class="">Sweater</h4>
+          <p>Light Sweater. You may be planning your mexico vacation to be warm and in the sun, but when evening comes, temperature may dip down a bit.</p>
+          <a class="vv" href="#">read more </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="xz">
+      <h4></h4>
+      <h1 class="text-center" style="font-size:65px; font-weight:400; padding: 30px 0px;">More <span class="policy text-primary">About</span> Orldera.</h1>
+  </div>
+  <div class="row d-block d-md-flex flex-row text-center py-3 px-4 bg-light block_1" style="height:auto;">
+    <div class="col-12 col-md-6">
+      <div class="row mx-auto">
+        <img src="{% static './img/about1.jpg' %}" class="img_2" style="object-fit:cover; width:100%; height: 500px;">
+      </div>
+    </div>
+    <div class="col-12 col-md-6 d-flex flex-column justify-content-md-center py-3 my-3">
+      <h3 class="py-2 text-h5 text-md-start text-primary pipa"><span class="black">ABOUT</span> US.</h3>
+      <p class="text-md-start py-3 parra">Our plan is to provide our customers with a life time vacation planner, giving them travel destinations and linking them with the best travelling agencies possible in the aim of maximizing quality, safety and effective cost reduction of a vacation. We plan to attract multi-million flight companies' investment in exchange for income or increased passengers traffic to an airline.</p>
+      <div class="text-md-start mt-3">
+        <a class="btn btn-primary " href="">About</a>
+      </div>
+    </div>
+    </div>
+  <div class="row d-flex flex-column flex-md-row text-light bg-primary foot">
+      <div class="col display-flex flex-column justify-center align-center">
+        <h1>Links</h1>
+        <ul>
+          <li><a href="#">- Home</a></li>
+          <li><a href="#">- Search</a></li>
+          <li><a href="#">- 50+</a></li>
+          <li><a href="#">- Laws</a></li>
+          <li><a href="#">- About</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Contact</h1>
+        <ul>
+          <li>- +2347046810016</li>
+          <li>- uniwylimp@gmail.com</li>
+          <li>- 6b Akintola Odeyemi Street, Ikotun, Lagos-Nigeria.</li>
+          <li>- IG: <a href="#">orldera_</a></li>
+          <li>- Fb: <a href="#">Orldera</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Services</h1>
+        <ul>
+          <li>- Donate To Orldera</li>
+          <li>- <a href="mailto:uniwylimp@gmail.com">Mail Us</a></li>
+          <li>- Forum</li>
+          <li>- Groups</li>
+        </ul>
+      </div>
+  </div>
+  <div class="row d-flex flex-column justify-center align-center foot2">
+    <div class="col text-center">
+      <img src="{% static './img/facebook.svg' %}">
+      <img src="{% static './img/twitter.svg' %}">
+      <img src="{% static './img/journal-medical.svg' %}">
+      <img src="{% static './img/medium.svg' %}">
+
+    </div>
+    <div class="col text-center pt-3 text-light"><p>Orldera Co-operation is registered under and supported by <a href="https://www.webelios.com">Webelios.Inc</a> the founding organisation of this company. Mail us for investment, deals, offers, donation and even employment opportunities.</p></div>
+    <div class="col text-center text-light tsy">&copy; 2022 All right Reservedd. Webelios.Inc</div>
+  </div>
+</body>
+</html>

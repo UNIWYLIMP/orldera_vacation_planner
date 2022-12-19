@@ -1,0 +1,144 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="ORLDERA PLANNER">
+    <meta name="author" content="JOY EMMANUEL">
+    <meta name="keywords" content="HOLIDAY PLANNER, INVESTMENT, VACATION SUGGESTIONS, VISA AGENCY, SECURITY, TOURISM, FAMILY VACATION">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <title>ORLDERA PLANNER</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+      <div class="row px-md-3 mx-md-5 mx-4 py-0 d-flex flex-row" style="height:35px; overflow-y: hidden; background-color:white;">
+          <div class="col-6">
+            <img src="{%static './img/logo.png'%}" class="imglogo" style="width:35px; height:35px; object-fit:cover;">
+          </div>
+          <div class="col-6 text-end">
+            <p class='header' style="padding:10px 0px 10px 0px;"><strong>ELIONA</strong></p>
+          </div>
+       </div>
+
+       <div class="row px-4 py-0 d-flex flex-row border border-1 border-primary bg-primary badda" style="height:40px; overflow-y: hidden;">
+          <div class="col-9 col-xl-8 px-2 px-sm-5 px-md-5 mx-xl-4 border border-1 border-primary d-flex flex-row align-center justify-center mnm">
+            <div class="px-2 px-md-3 px-xl-4 nav" ><a href="/home">Home</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/search">Search</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/50">50!</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/law">Law</a></div>
+            <div class="px-2 px-md-3 px-xl-4 nav"><a href="/about">About</a></div>
+          </div>
+         <div class="col-3 pt-1 text-center" >
+           {% if user.is_authenticated %}
+            <a href="/logout" class="btn btn-light text-primary py-0 px-2"> Logout</a>
+           {%else%}
+           <a href="/login" class="btn btn-light text-primary py-0 px-2"> Login</a>
+           {% endif %}
+         </div>
+       </div>
+
+    </div>
+	{% if user.is_authenticated %}
+  <div style="margin-bottom: 12vh;">
+      <div class="row d-flex flex-column flex-md-row text-center text-md-start">
+        <div class="col-md-10 col-12 m-auto ps-md-5 py-3 text-center d-flex flex-row justify-content-center">
+          <div class="d-none d-md-flex flex-column justify-content-center">
+            <img class="" src="{%static './img/search.svg' %}" style="height: 85px; width: 85px; margin-right: 20px;">
+          </div>
+              <div>
+                    <h4 class="text-center py-3">Search your <span class="policy">favourite</span> spot!</h4>
+                <div class="row-8">
+                    <form method="POST" action="/search/">
+                        {% csrf_token %}
+                        <input type="text" name="city" id="query">
+                        <button type="submit" class="btn btn-primary m-2">Search</button>
+                    </form>
+                </div>
+              </div>
+        </div>
+
+            <div class="col-md-2 col-12 text-center py-2 text-md-end">
+                <a href="/suggest"><img src="{%static './img/bab.png' %}" style="height: 35px; width: 35px; margin-right: 20px;">
+            </div>
+        </a>
+      </div>
+  	</div>
+		{%if num > 0%}
+			<a href="{% url 'cities' city.cityName%}" style="text-decoration:none;">
+			<div class="row px-1 py-1" >
+				<div class="row d-flex flex-column flex-md-row w-75 m-auto px-4 py-4 xnv">
+					<div class="col-12 col-md-6 m-auto">
+						<img src="{%static city.cityImage3 %}" class="xnv" style="height:300px; width: 95%; object-fit: cover;">
+					</div>
+					<div class="col-12 col-md-6 d-flex flex-column text-center text-start justify-content-center py-2 px-3">
+						<h3 class="py-2 text-h5 text-dark text-md-start text-primary">{{city.cityName}}</h3>
+						<p class="text-md-start text-dark py-2 parra">{{city.cityDescription}}</p>
+					</div>
+				</div>
+			</div></a>
+		{% else %}
+		<div class="text-center third">
+		<h4 class="text-dark mt-5 pt-5">No result for {{search}}. Please check keywords or try seaching another location</h4>
+		</div>
+		{% endif %}
+
+  	<div class="text-center mt-5 py-4">
+  		<p class="py-2">{{num}} Result(s)</p>
+  	</div>
+	  </div>
+	{% else %}
+		<div style="height: 85vh; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+			<h4 class="text-dark">ACCESS DENIED. PLEASE LOGIN TO ACCESS THIS PAGE</h4>
+			<div class="py-3"><a href="/login" class="btn btn-outline-dark">Login</a><a href="/signup" class="btn btn-outline-dark mx-1">Signup</a></div>
+  		</div>
+	{% endif %}
+
+	<div class="row d-flex flex-column flex-md-row text-light bg-primary foot">
+      <div class="col display-flex flex-column justify-center align-center">
+        <h1>Links</h1>
+        <ul>
+          <li><a href="#">- Home</a></li>
+          <li><a href="#">- Search</a></li>
+          <li><a href="#">- 50+</a></li>
+          <li><a href="#">- Laws</a></li>
+          <li><a href="#">- About</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Contact</h1>
+        <ul>
+          <li>- +2347046810016</li>
+          <li>- uniwylimp@gmail.com</li>
+          <li>- 6b Akintola Odeyemi Street, Ikotun, Lagos-Nigeria.</li>
+          <li>- IG: <a href="#">orldera_</a></li>
+          <li>- Fb: <a href="#">Orldera</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Services</h1>
+        <ul>
+          <li>- Donate To Orldera</li>
+          <li>- <a href="mailto:uniwylimp@gmail.com">Mail Us</a></li>
+          <li>- Forum</li>
+          <li>- Groups</li>
+        </ul>
+      </div>
+  </div>
+  	<div class="row d-flex flex-column justify-center align-center foot2">
+    <div class="col text-center">
+      <img src="{% static './img/facebook.svg' %}">
+      <img src="{% static './img/twitter.svg' %}">
+      <img src="{% static './img/journal-medical.svg' %}">
+      <img src="{% static './img/medium.svg' %}">
+
+    </div>
+    <div class="col text-center pt-3 text-light"><p>Orldera Co-operation is registered under and supported by <a href="https://www.webelios.com">Webelios.Inc</a> the founding organisation of this company. Mail us for investment, deals, offers, donation and even employment opportunities.</p></div>
+    <div class="col text-center text-light tsy">&copy; 2022 All right Reservedd. Webelios.Inc</div>
+  </div>
+</body>
+</html>

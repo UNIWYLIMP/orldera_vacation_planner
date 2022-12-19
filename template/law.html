@@ -1,0 +1,135 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="description" content="ORLDERA PLANNER">
+    <meta name="author" content="JOY EMMANUEL">
+    <meta name="keywords" content="HOLIDAY PLANNER, INVESTMENT, VACATION SUGGESTIONS, VISA AGENCY, SECURITY, TOURISM, FAMILY VACATION">
+    <meta http-equiv="refresh" content="300">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <title>ORLDERA PLANNER</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+	<div class="row px-md-3 mx-md-5 mx-4 py-0 d-flex flex-row" style="height:35px; overflow-y: hidden; background-color:white;">
+      <div class="col-6">
+        <img src="{%static './img/logo.png'%}" class="imglogo" style="width:35px; height:35px; object-fit:cover;">
+	  </div>
+	  <div class="col-6 text-end">
+        <p class='header' style="padding:10px 0px 10px 0px;"><strong>ELIONA</strong></p>
+      </div>
+   </div>
+
+   <div class="row px-4 py-0 d-flex flex-row border border-1 border-primary bg-primary badda" style="height:40px; overflow-y: hidden;">
+      <div class="col-9 col-xl-8 px-2 px-sm-5 px-md-5 mx-xl-4 border border-1 border-primary d-flex flex-row align-center justify-center mnm">
+        <div class="px-2 px-md-3 px-xl-4 nav" ><a href="/home">Home</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/search">Search</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/50">50!</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/law">Law</a></div>
+        <div class="px-2 px-md-3 px-xl-4 nav"><a href="/about">About</a></div>
+      </div>
+     <div class="col-3 pt-1 text-center">
+       {% if user.is_authenticated %}
+        <a href="/logout" class="btn btn-light text-primary py-0 px-2"> Logout</a>
+       {%else%}
+       <a href="/login" class="btn btn-light text-primary py-0 px-2"> Login</a>
+       {% endif %}
+     </div>
+   </div>
+
+   <div class="row px-3 py-5" style=" width: 90%; margin: auto;">
+     <h1 class="text-primary text-center text-dark">
+         Legal systems of the world
+     </h1>
+     <p class="py-3 text-start parran">
+     The contemporary national legal systems are generally based on one of four basic systems: civil law, common law, statutory law, religious law or combinations of these. However, the legal system of each country is shaped by its unique history and so incorporates individual variations. The science that studies law at the level of legal systems is called comparative law. Both civil (also known as Roman) and common law systems can be considered the most widespread in the world: civil law because it is the most widespread by landmass and by population overall, and common law because it is employed by the greatest number of people compared to any single civil law system.
+     </p>
+   </div>
+
+    <div class="row m-auto w-75 p-3 d-flex flex-column">
+        <div class="col-12 text-center text-md-start">
+          <h4 class="py-5 text-start"> Civil law</h4>
+          <img src="{%static '/img50/h53.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+        </div>
+        <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-start justify-content-center">
+            <p class="text-md-start py-2 parran"> The source of law that is recognized as authoritative is codifications in a constitution or statute passed by legislature, to amend a code. While the concept of codification dates back to the Code of Hammurabi in Babylon ca. 1790 BC, civil law systems derive from the Roman Empire and, more particularly, the Corpus Juris Civilis issued by the Emperor Justinian ca. AD 529. This was an extensive reform of the law in the Byzantine Empire, bringing it together into codified documents. Civil law was also partly influenced by religious laws such as Canon law and Islamic law. Civil law today, in theory, is interpreted rather than developed or made by judges. Only legislative enactments (rather than legal precedents, as in common law) are considered legally binding.</p></div>
+    </div>
+
+    <div class="row m-auto w-75 p-3 d-flex flex-column">
+        <div class="col-12 text-center text-md-start">
+          <h4 class="py-5 text-start"> Common law</h4>
+          <img src="{%static '/img50/h53.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+        </div>
+        <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-start justify-content-center">
+            <p class="text-md-start py-2 parran"> Common law and equity are systems of law whose sources are the decisions in cases by judges. In addition, every system will have a legislature that passes new laws and statutes. The relationships between statutes and judicial decisions can be complex. In some jurisdictions, such statutes may overrule judicial decisions or codify the topic covered by several contradictory or ambiguous decisions. In some jurisdictions, judicial decisions may decide whether the jurisdiction's constitution allowed a particular statute or statutory provision to be made or what meaning is contained within the statutory provisions. The common law developed in England, influenced by Anglo-Saxon law and to a much lesser extent by the Norman conquest of England, which introduced legal concepts from Norman law, which, in turn, had its origins in Salic law. Common law was later inherited by the Commonwealth of Nations, and almost every former colony of the British Empire has adopted it (Malta being an exception).<br> <br> The doctrine of stare decisis, also known as case law or precedent by courts, is the major difference to codified civil law systems. Common law is practiced in Canada (excluding Quebec), Australia, New Zealand, most of the United Kingdom (England, Wales, and Northern Ireland), South Africa, Ireland, India (excluding Goa),[citation needed] Pakistan, Hong Kong, the United States (on state and territorial levels excluding Louisiana and Puerto Rico), Bangladesh, and many other places. Several others have adapted the common law system into a mixed system; For example, Nigeria operates largely on a common law system in the southern states and at the federal level, but also incorporates religious law in the northern states.  <br> <br>In the European Union, the Court of Justice takes an approach mixing civil law (based on the treaties) with an attachment to the importance of case law. One of the most fundamental documents to shape common law is the English Magna Carta, which placed limits on the power of the English Kings. It served as a kind of medieval bill of rights for the aristocracy and the judiciary who developed the law.</p></div>
+    </div>
+
+    <div class="row m-auto w-75 p-3 d-flex flex-column">
+        <div class="col-12 text-center text-md-start">
+          <h4 class="py-5 text-start"> Religious law</h4>
+          <img src="{%static '/img50/h43.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+        </div>
+        <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-start justify-content-center">
+            <p class="text-md-start py-2 parran"> Religious law refers to the notion of a religious system or document being used as a legal source, though the methodology used varies. For example, the use of Judaism and halakha for public law has a static and unalterable quality, precluding amendment through legislative acts of government or development through judicial precedent; Christian canon law is more similar to civil law in its use of codes; and Islamic sharia law (and fiqh jurisprudence) is based on legal precedent and reasoning by analogy (qiyas), and is thus considered similar to common law. The main kinds of religious law are sharia in Islam, halakha in Judaism, and canon law in some Christian groups. In some cases these are intended purely as individual moral guidance, whereas in other cases they are intended and may be used as the basis for a country's legal system; the latter was particularly common during the Middle Ages.</p>
+        </div>
+    </div>
+
+    <div class="row m-auto w-75 p-3 d-flex flex-column">
+        <div class="col-12 text-center text-md-start">
+          <h4 class="py-5 text-start"> By geography</h4>
+          <img src="{%static '/img50/h48.jpg'%}" style="height: 500px; width: 500px; object-fit: cover;">
+        </div>
+        <div class="col-12 pt-5 px-3 px-md-5 px-lg-4 d-flex flex-column text-start justify-content-center">
+            <p class="text-md-start py-2 parran">Despite the usefulness of different classifications, every legal system has its own individual identity. Here are a list of legal systems, categorised by their geographic location: Anarchist law, Comparative law, English common law, International customary law, Sharia, Qanun (law), Legal pluralism, Journal of Legal Pluralism, Rule of law, Rule According to Higher Law, Socialist law, Soviet law, Tribal sovereignty, Western law, Comparative law, Legal education.</p>
+        </div>
+    </div>
+
+ <div class="row d-flex flex-column flex-md-row text-light bg-primary foot">
+      <div class="col display-flex flex-column justify-center align-center">
+        <h1>Links</h1>
+        <ul>
+          <li><a href="#">- Home</a></li>
+          <li><a href="#">- Search</a></li>
+          <li><a href="#">- 50+</a></li>
+          <li><a href="#">- Laws</a></li>
+          <li><a href="#">- About</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Contact</h1>
+        <ul>
+          <li>- +2347046810016</li>
+          <li>- uniwylimp@gmail.com</li>
+          <li>- 6b Akintola Odeyemi Street, Ikotun, Lagos-Nigeria.</li>
+          <li>- IG: <a href="#">orldera_</a></li>
+          <li>- Fb: <a href="#">Orldera</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h1>Services</h1>
+        <ul>
+          <li>- Donate To Orldera</li>
+          <li>- <a href="mailto:uniwylimp@gmail.com">Mail Us</a></li>
+          <li>- Forum</li>
+          <li>- Groups</li>
+        </ul>
+      </div>
+  </div>
+    <div class="row d-flex flex-column justify-center align-center foot2">
+    <div class="col text-center">
+      <img src="{% static './img/facebook.svg' %}">
+      <img src="{% static './img/twitter.svg' %}">
+      <img src="{% static './img/journal-medical.svg' %}">
+      <img src="{% static './img/medium.svg' %}">
+
+    </div>
+    <div class="col text-center pt-3 text-light"><p>Orldera Co-operation is registered under and supported by <a href="https://www.webelios.com">Webelios.Inc</a> the founding organisation of this company. Mail us for investment, deals, offers, donation and even employment opportunities.</p></div>
+    <div class="col text-center text-light tsy">&copy; 2022 All right Reservedd. Webelios.Inc</div>
+  </div>
+
+</body>
+</html>
